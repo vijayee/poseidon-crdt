@@ -133,8 +133,8 @@ class Document {
       return
     }
 
-    for (let index = revision; index < operation.length; index++) {
-      if (operation[index].id == id) {
+    for (let index = revision; index < operations.length; index++) {
+      if (operations[index].id == id) {
         context.add(id)
         return
       }
