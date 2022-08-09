@@ -154,6 +154,11 @@ class Document {
             T = new Tree(i)
           }
         }
+        if (S) {
+          S.union(i)
+        } else {
+          S = new Tree(i)
+        }
       }
     }
 
@@ -178,7 +183,7 @@ class Document {
     let delta = newText.length - oldText.length
     let limit = Math.max(0, cursor - delta)
     let end = oldText.length
-    while (((end > limit) && oldText.charAt(end -1))  == newText.charAt((end + delta) - 1)) {
+    while ((end > limit) && (oldText.charAt(end -1)  == newText.charAt((end + delta) - 1))) {
       end -= 1
     }
     let start = 0
