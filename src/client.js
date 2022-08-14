@@ -25,7 +25,7 @@ socket.on('update', function(ops) {
   doc.locations = [textElement.selectionStart, textElement.selectionEnd]
 
   for (var i = 0; i < ops.length; i++) {
-    doc.merge(ops[i])
+    doc.merge(ops[i], false)
   }
 /*
   if (rev < doc.operationsCount) {
