@@ -113,7 +113,7 @@ class Document {
   merge(operation) {
     let priority = _priority.get(this)
     let counter = _counter.get(this)
-    let currentId = priority + counter
+    let currentId = (priority * 0x100000) + counter;
     // ignore our own ops
     if ((operation.priority == priority) && (operation.id < currentId)) {
       return
