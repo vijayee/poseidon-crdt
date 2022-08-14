@@ -115,7 +115,7 @@ class Document {
     let counter = _counter.get(this)
     let currentId = (priority * 0x100000) + counter;
     // ignore our own ops
-    if ((operation.priority == priority) && (operation.id < currentId)) {
+    if ((operation.priority == priority) && (operation.id <= currentId)) {
       return
     }
     let id = operation.id
