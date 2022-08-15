@@ -42,6 +42,9 @@ class Document {
   get text () {
     return _text.get(this)
   }
+  set text (value) {
+    return _text.set(this, value)
+  }
   get locations () {
     return _locations.get(this)
   }
